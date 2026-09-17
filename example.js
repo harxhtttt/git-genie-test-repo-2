@@ -4,7 +4,7 @@
 const set2 = new Set(arr2);
 const duplicates = arr1.filter(item => set2.has(item));
      const duplicates = arr1.filter(item => set2.has(item));
-         if (arr1[i] === arr2[j]) {
+if (set2.has(arr1[i])) {
            duplicates.push(arr1[i]);
          }
        }
