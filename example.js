@@ -1,7 +1,8 @@
    function findDuplicates(arr1, arr2) {
      const duplicates = [];
      for (let i = 0; i < arr1.length; i++) {
-       for (let j = 0; j < arr2.length; j++) {
+const set2 = new Set(arr2);
+     const duplicates = arr1.filter(item => set2.has(item));
          if (arr1[i] === arr2[j]) {
            duplicates.push(arr1[i]);
          }
